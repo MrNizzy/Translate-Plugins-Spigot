@@ -1,0 +1,14 @@
+##################################
+# messages.yml
+# Change messages that are displayed to players
+#
+# MoneyDrop: This message is displayed when the player earns more than 0.0 currency
+# MoneyDropMessage_Enabled: Do you want to display a message to your players when money is dropped?
+# PlayerMobLevelNotifyIncrease: This message is displayed when the player changes to a more difficult mob level area (If the task is enabled in tasks.yml)
+# PlayerMobLevelNotifyDecrease: This message is displayed when the player changes to an easier mob level area (If the task is enabled in tasks.yml)
+#
+##################################
+MoneyDrop: '&a{entity} dropeo &e{money}&a dinero!'
+MoneyDropMessage_Enabled: true
+PlayerMobLevelNotifyIncrease: '&c¡Cuidado! &a¡Los niveles de los enemigos ahora son lvl(s) &e{level}&a!'
+PlayerMobLevelNotifyDecrease: '&aLos enemigos en esta área son un poco más fáciles, lvl(s) &e{level}'
