@@ -1,0 +1,10 @@
+#Establezca false si no está utilizando un sistema de permisos
+UsePermissions: false
+#¿Permitir que los arcos infinitos disparen flechas especiales sin que tomen la flecha?
+InfinityBowWorks: false
+#¿Pueden los esqueletos disparar flechas? --> Defina % en SkeletonArrows.yml!
+SkeletonCanShootArrow: true
+#¿Deberían los esqueletos dejar caer flechas especiales?
+SkeletonsDropArrows: true
+#¿Los esqueletos solo deberían soltar flechas especiales cuando los mata un jugador?
+SkeletonsDropArrowsOnlyOnPlayerKill: true

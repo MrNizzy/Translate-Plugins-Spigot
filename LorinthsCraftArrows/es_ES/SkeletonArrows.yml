@@ -1,0 +1,50 @@
+#Define la probabilidad de que los esqueletos disparen ciertas flechas: ¡valores más altos significan mayores posibilidades! 0 = desactivar
+ShootChance:
+  Normal: 43
+  Crippling: 5
+  Blinding: 3
+  Weakness: 4
+  Shuffle: 2
+  Lightning: 2
+  Confusion:  3
+  Poison: 2
+  Fire: 2
+  Pull: 2
+  Blood: 3
+  Piercing: 3
+  Razor: 3
+  Wither: 1
+#Define la probabilidad de que los esqueletos suelten ciertas flechas: ¡los valores más altos significan una mayor probabilidad! 0 = desactivar
+DropChance:
+  Normal: 30
+  Crippling: 10
+  Blinding: 10
+  Weakness: 10
+  Teleport: 10
+  Explosive: 10
+  Shuffle: 10
+  Lightning:  10
+  Confusion: 10
+  Poison: 10
+  Fire: 10
+  Pull: 10
+  Blood: 10
+  Piercing: 10
+  Razor: 10
+  Torch: 10
+  Net: 10
+  Water: 10
+  Forcefield: 10
+  Vortex: 10
+  Push: 10
+  Sound: 10
+  Wither: 10
+  Medic: 10
+  Ice: 10
+#¿Debería soltar siempre una cantidad fija de flechas?
+DropFixedAmount: false
+#Si DropFixedAmount es verdadero, use "Amount" para establecer la cantidad de flechas lanzadas por los esqueletos
+Amount: 2
+#Si DropFixedAmount es falso (por defecto), use Min para establecer la caída mínima y Max para establecer la cantidad máxima de drop
+Min: 1
+Max: 3
