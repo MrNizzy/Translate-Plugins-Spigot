@@ -1,0 +1,45 @@
+##########
+# display.yml
+#   - Display options for items
+#
+# ItemGlow: (true/false) - Dropped rpg items glow! Also glows the same color as the rarity tier!
+# ShowDroppedItemNames: (All / Named / None) - Displays dropped item names on the ground (All Requires LangUtils - )
+# ItemDroppedNameLocale: (true/false) - Selected locale used by LangUtils for the 'All' option for dropped items
+# Name: The display name of dropped rpg items
+#   Valid Values: {rarityColor}, {prefix}, {name}, {suffix}
+# Level: The level tag in the lore
+#   Valid Values: {level}
+# iLevel: The item level tag in the lore (displayed if item level > max level (in modifications.yml))
+#   Valid Values: {ilevel}
+# Durability: The durability tag used in the lore
+# DurabilitySeperator: The delimeter for min/max value on items
+# Rarity: The items calculated rarity tier
+#   Valid Values: {rarity}
+# AttributeSeperator: The delimeter for attibures/value combinations on items
+# HealthScale:
+#   Enabled: (true / false)
+#   Scale: The visible hearts a player has. -1 to disable, 20 = 1 line, 40 = 2 lines, etc
+#   Activation: (Always / Greater) - When HealthScale takes effect.
+#     Always = You always have your health scaled to HealthScale
+#     Greater = Your health scales once it is past the threshold (HealthScale)
+#
+##########
+
+ItemGlow: true
+ShowDroppedItemNames: Named
+ItemDroppedNameLocale: 'en_us'
+Name: '{rarityColor}{prefix} {name} {suffix}'
+Level: '&6Level: &e{level}'
+iLevel: '&eiLevel: &e{ilevel}'
+Durability: '&3Durability: {durability}'
+DurabilitySeperator: ' / '
+Rarity: '&7Rarity: {rarity}'
+Consumable: '&8[Consumable: {consumable}]'
+Gearset: '&aGear Set: {gearset}'
+AttributeSeperator: ' - '
+EnhancementFormat: '{basename} &e+{enhancementTier}'
+RemoveVanillaAttributes: true
+HealthScale:
+  Enabled: true
+  Scale: 20
+  Activation: Greater

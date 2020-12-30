@@ -1,0 +1,54 @@
+##########
+# itemgeneration.yml
+#   - Configure valid weapons / armor in this file
+#
+# Placing a material or id/durability combination tells the generator when a specified item is a valid weapon/armor
+# NOTE: You need to put materials here before they will work in rarity.yml
+#
+# 'id:durability' is used for custom textured items based on vanilla durability values
+#
+# WeaponList:
+# - MATERIAL for vanilla items
+# - 'id:durability' for custom items
+# ArmorList:
+# - MATERIAL for vanilla items
+# - 'id:durability' for custom items
+##########
+
+WeaponList:
+- WOOD_SWORD
+- STONE_SWORD
+- IRON_SWORD
+- GOLD_SWORD
+- DIAMOND_SWORD
+- WOOD_AXE
+- STONE_AXE
+- IRON_AXE
+- GOLD_AXE
+- DIAMOND_AXE
+- BOW
+- CROSSBOW
+- TRIDENT
+- '276:1'
+ArmorList:
+- LEATHER_HELMET
+- LEATHER_CHESTPLATE
+- LEATHER_LEGGINGS
+- LEATHER_BOOTS
+- CHAINMAIL_HELMET
+- CHAINMAIL_CHESTPLATE
+- CHAINMAIL_LEGGINGS
+- CHAINMAIL_BOOTS
+- IRON_HELMET
+- IRON_CHESTPLATE
+- IRON_LEGGINGS
+- IRON_BOOTS
+- GOLD_HELMET
+- GOLD_CHESTPLATE
+- GOLD_LEGGINGS
+- GOLD_BOOTS
+- DIAMOND_HELMET
+- DIAMOND_CHESTPLATE
+- DIAMOND_LEGGINGS
+- DIAMOND_BOOTS
+- SHIELD

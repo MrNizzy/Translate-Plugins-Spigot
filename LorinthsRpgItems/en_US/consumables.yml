@@ -1,0 +1,28 @@
+exampleConsumable:
+  Item:
+    Id: APPLE
+    DisplayName: '&aExample Consumable'
+    Lore:
+    - '&7This items provides you with &e5 &ahealth'
+    - '&7and increases your &cstrength &7for &e30 seconds'
+  Level: 1
+  Sound: ENTITY_GENERIC_EAT
+  RemoveOnDeath: true
+  EatingDuration: 1.0
+  Cooldown: 30.0
+  Duration: 30.0
+  Heal: 5.0
+  Mana: 5.0
+  Stamina: 5.0
+  Food: 5.0
+  Tags:
+  - 'Example'
+  Buffs:
+    Damage: 1
+  PotionEffects:
+    Increase_Damage: 1
+  Commands:
+  - "console: say {player} is eating an Example Consumable!"
+  Radius: 0.0
+  Events:
+    OnPickup: CONSUME

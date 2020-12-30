@@ -1,0 +1,81 @@
+##########
+# sell.yml
+#   - configure sell functionality
+#
+# Enabled: Allow for sell menu/functionality
+# Messages:
+#   Sold: (String) - Message shown when items have been sold
+# GUI:
+#   Title: (String)  - Title of menu ({total} - total value of items in inventory)
+#   Rows: (Integer)  - number of rows in sell menu
+#   SingleSelectClick: (ClickType) - What kind of click results in one item being moved to the sell window?
+#   MultiSelectClick: (ClickType)  - What kind of click results in a full stack being moved to the sell window?
+#   UseDoubleConfirm: (true/false) - Should we require the player confirm twice to sell items?
+#   IgnoreHotbarClick: (true/false) - Should we ignore clicks in the player hotbar? (useful if using a skill hotbar system(
+#   Slots:
+#     Confirm: (Integer)
+#     DoubleConfirm: (Integer)
+#     Cancel: (Integer)
+#   Items:
+#     Confirm:
+#     DoubleConfirm:
+#     Cancel:
+#       Id: (MaterialDurability)
+#       DisplayName: (String)
+#       Lore:
+#       - 'Lines of'
+#       - 'Lore Here'
+# RpgValueFormula: (String) - equation that results in a value for a given Rpg Item
+#       {level} - level of item
+#       {rarityValue} - value of rarity
+#       {attributeValues} - values of attributes
+#       {rawValue} - raw value of item listed under Values section below
+# RarityValues:      - Define the value of a rarity
+#   RarityTier: (double) - RarityName/value key pair
+# AttributeValues:   - Define the value of an attribute
+#   Attribute: (double)  - AttributeName/value key pair
+# Values:
+#   MaterialDurability: (Double) - set value of a single non rpgItem (example, a stack of Cobblestone = 64*(value of cobblestone)
+##########
+
+Enabled: false
+Messages:
+  Sold: '&aYou made &e{amount} &afrom that sell!'
+GUI:
+  Title: '&aSell Menu'
+  Rows: 5
+  SingleSelectClick: LEFT
+  MultiSelectClick: SHIFT_LEFT
+  UseDoubleConfirm: true
+  IgnoreHotbarClick: true
+  Slots:
+    Total: 42
+    Confirm: 43
+    Cancel: 44
+  Items:
+    Total:
+      Id: 'GOLD_INGOT'
+      DisplayName: '&aTotal = &6{total}'
+    Confirm:
+      Id: 'GREEN_STAINED_GLASS_PANE'
+      DisplayName: '&aConfirm'
+    DoubleConfirm:
+      Id: 'YELLOW_STAINED_GLASS_PANE'
+      DisplayName: '&eAre you sure?'
+    Cancel:
+      Id: 'RED_STAINED_GLASS_PANE'
+      DisplayName: '&cCancel'
+RpgValueFormula: '{level}*5*{rarityValue}*{attributeValues}'
+AttributeValues:
+  Damage: 1.2
+  Vampirism: 1.2
+  MovementSpeed: 1.2
+RarityValues:
+  Common: 1
+  Uncommon: 1.2
+  Rare: 1.5
+  Epic: 2
+  Legendary: 3
+Values:
+  COBBLESTONE: 0.1
+  STONE: 0.1

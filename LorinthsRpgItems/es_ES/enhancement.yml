@@ -1,0 +1,100 @@
+Enabled: false
+useMultiBlockStructure: true
+Messages:
+  EnhancementSuccess: '&aItem mejorado a &e+{tier}'
+  EnhancementFailure: '&cNo se pudo mejorar el item'
+  EnhancementDestroy: '&4Perdiste el item (Se destruyó en el proceso)...'
+  CreatedMultiblockStructure: '&a¡Creaste una estructura de mejora rpg!'
+  DestroyedMultiblockStructure: '&c¡Has destruido una estructura de mejora rpg!'
+EnhancementItems:
+  EnhancementScrollA:
+    Id: FLOWER_BANNER_PATTERN
+    DisplayName: '&aPergamino de mejora A'
+    Lore:
+      - '&7Este item mejorará tu equipo'
+      - '&7hasta un máximo de &e+3'
+    ItemFlags:
+      - HIDE_POTION_EFFECTS
+    MinimumLevel: 1
+    MaximumLevel: 10
+    TierChances:
+      1:
+        Success: 100
+        Destroy: 0
+        RaritySpecificSuccess:
+          Legendary: 95
+        RaritySpecificDestroy:
+          Legendary: 5
+      2:
+        Success: 95
+        Destroy: 0
+      3:
+        Success: 90
+        Destroy: 0
+    NumberOfUpgrades: 1
+    AllAttributePercentIncrease: 10 #gives 10% increase to all stats
+    AttributeSpecificPercentIncrease:
+      Defense: 10 # gives 10% increase only for Defense (in addition to PercentIncrease)
+    AttributeMaximumValueIncrease:
+      Defense: 5 # Limits the increase to 5
+    AttributeMinimumValueIncrease:
+      Health: 1 # If the item has this stat it will ensure we add at least this amount each upgrade
+  EnhancementScrollB:
+    Id: FLOWER_BANNER_PATTERN
+    DisplayName: '&aPergamino de mejora B'
+    Lore:
+      - '&7Este item mejorará tu equipo'
+      - '&7hasta un máximo de &e+6'
+      - '&7Nota: Solo se puede usar en items de &e+3'
+    ItemFlags:
+      - HIDE_POTION_EFFECTS
+    MinimumLevel: 1
+    MaximumLevel: 10
+    TierChances:
+      4:
+        Success: 90
+        Destroy: 0
+      5:
+        Success: 80
+        Destroy: 2.5
+      6:
+        Success: 70
+        Destroy: 5
+    AllAttributePercentIncrease: 7.5
+    AttributeMinimumValueIncrease:
+      Health: 1 # If the item has this stat it will ensure we add at least this amount each upgrade
+GUI:
+  Title: '&aMenú de mejora'
+  Rows: 3
+  Slots:
+    Instruction: 0
+    TargetItem: 11
+    EnhancementMaterial: 13
+    Result: 16
+    ChanceInfo: 18
+  Items:
+    Instruction:
+      Id: '339:0'
+      DisplayName: '&aInstrucciones'
+      Lore:
+        - '&71) Seleccione un elemento para mejorar'
+        - '&72) Seleccione un material de mejora'
+        - ''
+        - '&a&nMejorando'
+        - '&e&lClick izquierdo &r&7- Reparar usando el material una vez'
+    ChanceInfo:
+      Id: '339:0'
+      DisplayName: '&aProb. de resultado de mejora'
+      Lore:
+        - '&aProb. Éxito &7= {successChance}'
+        - '&cProb. Fallo &7= {failureChance}'
+        - '&4Prob. Fallo crítico &7= {destroyChance}'
+    LockedSlot:
+      Id: '160:7'
+      DisplayName: ''
+    NotValidEnhancementItem:
+      Id: BARRIER
+      DisplayName: '&cMaterial de mejora no válido'
+      Lore:
+        - '&eEste item no se puede utilizar para mejorar'
+        - '&eel item rpg proporcionado en su nivel actual.'

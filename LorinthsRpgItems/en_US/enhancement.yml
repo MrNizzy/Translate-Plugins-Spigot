@@ -1,0 +1,100 @@
+Enabled: false
+useMultiBlockStructure: true
+Messages:
+  EnhancementSuccess: '&aEnhanced item to &e+{tier}'
+  EnhancementFailure: '&cFailed to enhance the item'
+  EnhancementDestroy: '&4You lost the item...'
+  CreatedMultiblockStructure: '&aYou created an rpg enhancement structure!'
+  DestroyedMultiblockStructure: '&cYou destroyed an rpg enhancement structure!'
+EnhancementItems:
+  EnhancementScrollA:
+    Id: FLOWER_BANNER_PATTERN
+    DisplayName: '&aEnhancment Scroll A'
+    Lore:
+      - '&7This item will enhance your gear up'
+      - '&7to a maximum of &e+3'
+    ItemFlags:
+      - HIDE_POTION_EFFECTS
+    MinimumLevel: 1
+    MaximumLevel: 10
+    TierChances:
+      1:
+        Success: 100
+        Destroy: 0
+        RaritySpecificSuccess:
+          Legendary: 95
+        RaritySpecificDestroy:
+          Legendary: 5
+      2:
+        Success: 95
+        Destroy: 0
+      3:
+        Success: 90
+        Destroy: 0
+    NumberOfUpgrades: 1
+    AllAttributePercentIncrease: 10 #gives 10% increase to all stats
+    AttributeSpecificPercentIncrease:
+      Defense: 10 # gives 10% increase only for Defense (in addition to PercentIncrease)
+    AttributeMaximumValueIncrease:
+      Defense: 5 # Limits the increase to 5
+    AttributeMinimumValueIncrease:
+      Health: 1 # If the item has this stat it will ensure we add at least this amount each upgrade
+  EnhancementScrollB:
+    Id: FLOWER_BANNER_PATTERN
+    DisplayName: '&aEnhancment Scroll B'
+    Lore:
+      - '&7This item will enhance your gear up'
+      - '&7to a maximum of &e+6'
+      - '&7Note: Can only be used on items at &e+3'
+    ItemFlags:
+      - HIDE_POTION_EFFECTS
+    MinimumLevel: 1
+    MaximumLevel: 10
+    TierChances:
+      4:
+        Success: 90
+        Destroy: 0
+      5:
+        Success: 80
+        Destroy: 2.5
+      6:
+        Success: 70
+        Destroy: 5
+    AllAttributePercentIncrease: 7.5
+    AttributeMinimumValueIncrease:
+      Health: 1 # If the item has this stat it will ensure we add at least this amount each upgrade
+GUI:
+  Title: '&aEnhancement Menu'
+  Rows: 3
+  Slots:
+    Instruction: 0
+    TargetItem: 11
+    EnhancementMaterial: 13
+    Result: 16
+    ChanceInfo: 18
+  Items:
+    Instruction:
+      Id: '339:0'
+      DisplayName: '&aInstructions'
+      Lore:
+        - '&71) Select an item to enhance'
+        - '&72) Select an enhancement material'
+        - ''
+        - '&a&nEnhancing'
+        - '&e&lLeft Click &r&7- Repair using the material once'
+    ChanceInfo:
+      Id: '339:0'
+      DisplayName: '&aEnhancement Result Chance'
+      Lore:
+        - '&aSuccess &7= {successChance}'
+        - '&cFailure &7= {failureChance}'
+        - '&4Critical Failure &7= {destroyChance}'
+    LockedSlot:
+      Id: '160:7'
+      DisplayName: ''
+    NotValidEnhancementItem:
+      Id: BARRIER
+      DisplayName: '&cInvalid Enhancement Material'
+      Lore:
+        - '&eThis item cannot be used to upgrade'
+        - '&ethe provided rpg item at its current tier'

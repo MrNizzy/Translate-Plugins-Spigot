@@ -1,0 +1,134 @@
+##########
+# experience.yml
+#   - configurable text/sound/particles for effects
+#
+# MonsterExperienceHook: - (None, Vanilla, BuiltIn, LorinthsRpgMobs)
+#   None - Disabled
+#   Vanilla - Will work with most plugins that change dropped experience
+#   BuiltIn - Will use the experience definitions in this file
+#   LorinthsRpgMobs - Will use the exp given by RpgMobs
+#
+# NOTE: The rest of these options are used for "BuiltIn" - MonsterExperienceHook
+#
+# PlayerExperienceMode: - (FORMULA, LEVEL_DEFINITION) Mode used to determine experience needed to level per player level
+# PlayerLevelFormula: - Formula used to determine experience per player level, args: {level}
+# ExperienceMessage: - Message sent when player gains BuiltIn EXP
+# LostExperienceMessage: - Message sent when player loses BuiltIn EXP
+# ExperienceMessageDelivery: - (CHAT, ACTION_BAR) Message delivery mode
+# LevelUpMessages: - Messages sent to the player when player levels up, args: {level}, {player_name}
+# LevelCap: (Integer) - Level which players can't level past
+# LevelExperienceDefinitions: - Define exp needed per level
+#   level: value - need {value} experience to level from this level to next
+#   1: 50 - 50 experience to level from level 1 to level 2
+# ExperienceRewards:
+#   entity_type: min-max or just put value
+# LevelUpEvents:
+#   level:
+#     - list of commands args: [{player}, {level}]
+#     - for console: or player:
+# LevelPassiveStats: (Provides your players with base stats at specified benchmarks.)
+#   NOTE: The stats selected would be the closest level at or below your players level. (e.g. player level 4 would get stats from the level 1 config setting)
+#   level:
+#     Attribute: value or range
+#     Attribute: value or range
+#   1:
+#     Health: 1
+#   5:
+#     Health: 5
+#     Damage: 1
+#
+#
+##########
+
+MonsterExperienceHook: BuiltIn
+PlayerExperienceMode: FORMULA
+PlayerLevelFormula: '(({level}-1) * 20.0) + 50.0'
+ExperienceMessage: '&aYou gained &6{exp} &aexp!'
+LostExperienceMessage: '&cYou lost &6{exp}&c...'
+ExperienceMessageDelivery: 'ACTION_BAR'
+LevelUpMessages:
+- '&6Congrats &e{player_name}&6!'
+- '&6You have leveled up!'
+- '&6You are now level &e{level}'
+LevelCap: 50
+LevelExperienceDefinitions:
+  1: 50
+  2: 70
+  3: 90
+  4: 110
+  5: 130
+  6: 150
+  7: 170
+  8: 180
+  9: 190
+  10: 200
+  # etc
+ExperienceRewards:
+  ARMOR_STAND: 0-0
+  BAT: 2-4
+  BLAZE: 4-6
+  CAVE_SPIDER: 4-7
+  CHICKEN: 2-5
+  COW: 3-6
+  CREEPER: 5-8
+  DONKEY: 3-6
+  ELDER_GUARDIAN: 20-25
+  ENDER_DRAGON: 150-300
+  ENDERMAN: 8-12
+  ENDERMITE: 1-2
+  EVOKER: 10-15
+  GHAST: 8-15
+  GIANT: 50-150
+  GUARDIAN: 4-8
+  HORSE: 3-6
+  HUSK: 7-10
+  ILLUSIONER: 25-50
+  IRON_GOLEM: 15-20
+  LLAMA: 3-6
+  MAGMA_CUBE: 3-7
+  MULE: 3-6
+  MUSHROOM_COW: 3-6
+  OCELOT: 4-8
+  PARROT: 2-4
+  PIG: 3-6
+  PIG_ZOMBIE: 7-15
+  POLAR_BEAR: 7-9
+  RABBIT: 2-4
+  SHEEP: 2-6
+  SHULKER: 6-12
+  SILVERFISH: 1-2
+  SKELETON: 5-8
+  SKELETON_HORSE: 8-12
+  SLIME: 3-7
+  SNOWMAN: 2-3
+  SPIDER: 5-8
+  SQUID: 4-6
+  STRAY: 7-10
+  VEX: 6-12
+  VILLAGER: 1-10
+  VINDICATOR: 10-15
+  WITCH: 5-7
+  WITHER: 50-100
+  WITHER_SKELETON: 8-12
+  WOLF: 5-9
+  ZOMBIE: 5-8
+  ZOMBIE_HORSE: 8-12
+  ZOMBIE_VILLAGER: 5-15
+LevelUpEvents:
+  10:
+  - "console:say {player} just hit level {level}!"
+LevelPassiveStats:
+  1:
+    Health: 1
+  2:
+    Health: 2
+  3:
+    Health: 3
+  4:
+    Health: 4
+  5:
+    Health: 5
+    Damage: 1
+  10:
+    Health: 10
+    Damage: 2

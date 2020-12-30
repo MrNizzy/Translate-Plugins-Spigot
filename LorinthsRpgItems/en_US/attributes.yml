@@ -1,0 +1,296 @@
+##########
+# attributes.yml
+#   - configurable rpg attributes
+#
+# Attributes:
+#   RpgAttribute:
+#     Display: Name displayed on items
+#     DisplayMaterial: Material displayed in the stats gui
+#     DefaultValue: default start value for players
+#     IsDecimal: allows for decimals in value (up to 2 decimal places)
+#     IsPercent: displays a % after the value
+#  Attribute List
+#      Health
+#      Damage
+#      PvEDamage
+#      PvPDamage
+#      Defense
+#      PvEDefense
+#      PvPDefense
+#      CriticalChance
+#      CriticalDamage
+#      DodgeChance
+#      BlockChance
+#      BlockDamage
+#      MovementSpeed
+#      Jump
+#      Penetration
+#      AttackSpeed
+#      Vampirism
+#      Accuracy
+#      BurnChance
+#      BurnDamage
+#      PoisonChance
+#      PoisonDamage
+#      ExpGain
+#
+#      Heroes Specific
+#        Mana
+#        ManaRegeneration
+#        Stamina
+#        StaminaRegeneration
+#        Strength
+#        Constitution
+#        Endurance
+#        Dexterity
+#        Intellect
+#        Wisdom
+#        Charisma
+##########
+
+Attributes:
+  Health:
+    Enabled: true
+    Display: '&aHealth'
+    DisplayMaterial: COOKED_BEEF
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Damage:
+    Enabled: true
+    Display: '&cDamage'
+    DisplayMaterial: DIAMOND_AXE
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: false
+  PvEDamage:
+    Enabled: true
+    Display: '&cPvE Damage'
+    DisplayMaterial: IRON_SWORD
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  PvPDamage:
+    Enabled: true
+    Display: '&cPvP Damage'
+    DisplayMaterial: GOLD_SWORD
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  Defense:
+    Enabled: true
+    Display: '&3Defense'
+    DisplayMaterial: DIAMOND_CHESTPLATE
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  PvEDefense:
+    Enabled: true
+    Display: '&3PvE Defense'
+    DisplayMaterial: IRON_CHESTPLATE
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  PvPDefense:
+    Enabled: true
+    Display: '&3PvP Defense'
+    DisplayMaterial: GOLD_CHESTPLATE
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  CriticalChance:
+    Enabled: true
+    Display: '&2Critical'
+    DisplayMaterial: SULPHUR
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  CriticalDamage:
+    Enabled: true
+    Display: '&2Critical Dmg'
+    DisplayMaterial: TNT
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: true
+  DodgeChance:
+    Enabled: true
+    Display: '&aDodge'
+    DisplayMaterial: STRING
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  BlockChance:
+    Enabled: true
+    Display: '&bBlock'
+    DisplayMaterial: SHIELD
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  BlockDamage:
+    Enabled: true
+    Display: '&bBlock Damage'
+    DisplayMaterial: SHIELD
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: false
+  MovementSpeed:
+    Enabled: true
+    Display: '&aMove Speed'
+    DisplayMaterial: LEATHER_BOOTS
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: false
+  Jump:
+    Enabled: true
+    Display: '&aJump'
+    DisplayMaterial: RABBIT_FOOT
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: true
+  Penetration:
+    Enabled: true
+    Display: '&cPenetration'
+    DisplayMaterial: ARROW
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  AttackSpeed:
+    Enabled: true
+    Display: '&cAttack Speed'
+    DisplayMaterial: FEATHER
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  Vampirism:
+    Enabled: true
+    Display: '&5Vampirism'
+    DisplayMaterial: REDSTONE_BLOCK
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  Accuracy:
+    Enabled: true
+    Display: '&eAccuracy'
+    DisplayMaterial: BOW
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  BurnChance:
+    Enabled: true
+    Display: '&cBurn'
+    DisplayMaterial: FLINT_AND_STEEL
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  BurnDamage:
+    Enabled: true
+    Display: '&cBurn Dmg'
+    DisplayMaterial: LAVA_BUCKET
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: false
+  PoisonChance:
+    Enabled: true
+    Display: '&2Poison'
+    DisplayMaterial: RED_MUSHROOM
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  PoisonDamage:
+    Enabled: true
+    Display: '&2Poison Damage'
+    DisplayMaterial: BROWN_MUSHROOM
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: false
+  ExpGain:
+    Enabled: true
+    Display: '&aExp Gain'
+    DisplayMaterial: EXP_BOTTLE
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  GoldGain:
+    Enabled: true
+    Display: '&eGold Gain'
+    DisplayMaterial: GOLD_INGOT
+    DefaultValue: 0.0
+    IsDecimal: true
+    IsPercent: true
+  Mana:
+    Enabled: true
+    Display: '&9Mana'
+    DisplayMaterial: POTION
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  ManaRegeneration:
+    Enabled: true
+    Display: '&9Mana Regen'
+    DisplayMaterial: POTION
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Stamina:
+    Enabled: true
+    Display: '&eStamina'
+    DisplayMaterial: APPLE
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  StaminaRegeneration:
+    Enabled: true
+    Display: '&eStamina Regen'
+    DisplayMaterial: APPLE
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Strength:
+    Enabled: true
+    Display: '&cStrength'
+    DisplayMaterial: DIAMOND_SWORD
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Constitution:
+    Enabled: true
+    Display: '&eConstitution'
+    DisplayMaterial: COOKED_CHICKEN
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Endurance:
+    Enabled: true
+    Display: '&6Endurance'
+    DisplayMaterial: RABBIT_HIDE
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Dexterity:
+    Enabled: true
+    Display: '&2Dexterity'
+    DisplayMaterial: BOW
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Intellect:
+    Enabled: true
+    Display: '&3Intellect'
+    DisplayMaterial: NETHER_WARTS
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Wisdom:
+    Enabled: true
+    Display: '&9Wisdom'
+    DisplayMaterial: END_ROD
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false
+  Charisma:
+    Enabled: true
+    Display: '&eCharisma'
+    DisplayMaterial: RED_ROSE
+    DefaultValue: 0.0
+    IsDecimal: false
+    IsPercent: false

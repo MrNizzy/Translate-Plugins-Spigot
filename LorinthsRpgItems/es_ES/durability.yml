@@ -1,0 +1,122 @@
+##########
+# durability.yml
+#   - Configure custom durability values for rpg items
+#
+# NOTE: USING CUSTOM DURABILITY REQUIRES UnbreakableItems: true in config.yml!!!!!!
+#
+# 'id:durability' is used for custom textured items based on vanilla durability values
+#
+# Default values are based on vanilla durabilities
+#
+# Messages:
+#   DeliveryType: (CHAT, ACTION_BAR) - how do you want the message delivered
+#   DurabilityWarnings: valid args, {name} - name of the item, {durability} - the durability amount for the current item
+#     ##%: When the durability hits the number% durability, this message will be sent
+#     ##: When the durability hits the straight number, this message will be sent
+#     -##: When the durability hits the number and every number below, this message will be sent
+# UseCustomDurability: (true/false) - do you want to use the durability system?
+# UseDecimalDurability: (true/false) - do you want more precise decimal handling for durability?
+# DoCustomItemsDisappearWhenBroken: (true/false) - do you want custom items to 'break' like vanilla items (aka disappear?)
+# DurabilityCost: - Costs for different actions
+#   Weapons:
+#     Melee: - on melee hit
+#       MainHand: 1.0 - how much durability damage to main hand
+#       OffHand: 0.5 - how much durability damage to off hand
+#     Bow:
+#       Melee: 0.5 - how much durability damage to bow on melee hit
+#       Shoot: 1.0 - how much durability damage to bow on shoot
+#     Shield:
+#       Passive: 0.3 - how much durability damage to shield when passively hit not blocking
+#       Block: 1.0 - how much durability damage to shield when actively blocking
+#   Armor:
+#     DamageChance:
+#       Head: 20 - % chance for damaging helmet
+#       Chest: 50 - % chance for damaging chestplate
+#       Legs: 30 - % chance for damaging leggings
+#       Feet: 20 - % chance for damaging boots
+#     DamageAmount:
+#       Head: 1.0 - how much durability damage done to helmet
+#       Chest: 1.0 - how much durability damage done to chestplate
+#       Legs: 1.0 - how much durability damage done to legs
+#       Feet: 1.0 - how much durability damage done to boots
+#   BlockBreak:
+#     Default: 1 - how much durability it costs to break all blocks
+#     Material: 2 - how much durability it costs to break a specific type of block
+# Durability:
+#   MATERIAL: value or min-max for slightly randomized values
+#   'id:durability': value or min-max for slightly randomized values
+##########
+
+# DurabilityCost
+
+
+Messages:
+  DeliveryType: 'ACTION_BAR'
+  DurabilityWarnings:
+    50%: '&e¡Tu item, {name} &ese está desgastando!'
+    50: '&eTu item, {name} &ele queda {durability} durabilidad'
+    25: '&6Tu item, {name} &6le queda 25 de durabilidad'
+    -10: '&c¡Tu item, {name} &cle queda {durability} durabilidad!'
+  ItemBroken: '&5¡Tu item, {name} se ha roto!'
+UseCustomDurability: true
+UseDecimalDurability: false
+DoCustomItemsDisappearWhenBroken: false
+DurabilityCost:
+  Weapons:
+    Melee:
+      MainHand: 1.0
+      OffHand: 0.5
+    Bow:
+      Melee: 0.5
+      Shoot: 1.0
+    Shield:
+      Passive: 0.3
+      Block: 1.0
+  Armor:
+    DamageChance:
+      Head: 20
+      Chest: 50
+      Legs: 30
+      Feet: 20
+    DamageAmount:
+      Head: 1.0
+      Chest: 1.0
+      Legs: 1.0
+      Feet: 1.0
+  BlockBreak:
+    Default: 1
+    OBSIDIAN: 2-3
+Durability:
+  BOW: 384
+  SHIELD: 337
+  GOLD_SWORD: 33
+  WOOD_SWORD: 60
+  STONE_SWORD: 132
+  IRON_SWORD: 251
+  DIAMOND_SWORD: 1562
+  GOLD_AXE: 33
+  WOOD_AXE: 60
+  STONE_AXE: 132
+  IRON_AXE: 251
+  DIAMOND_AXE: 1562
+  LEATHER_HELMET: 56
+  LEATHER_CHESTPLATE: 81
+  LEATHER_LEGGINGS: 76
+  LEATHER_BOOTS: 66
+  GOLD_HELMET: 78
+  GOLD_CHESTPLATE: 113
+  GOLD_LEGGINGS: 106
+  GOLD_BOOTS: 92
+  CHAINMAIL_HELMET: 166
+  CHAINMAIL_CHESTPLATE: 241
+  CHAINMAIL_LEGGINGS: 226
+  CHAINMAIL_BOOTS: 196
+  IRON_HELMET: 166
+  IRON_CHESTPLATE: 241
+  IRON_LEGGINGS: 226
+  IRON_BOOTS: 196
+  DIAMOND_HELMET: 364
+  DIAMOND_CHESTPLATE: 529
+  DIAMOND_LEGGINGS: 496
+  DIAMOND_BOOTS: 430
+  '271:0': 132

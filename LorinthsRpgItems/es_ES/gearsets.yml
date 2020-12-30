@@ -1,0 +1,48 @@
+##########
+# gearsets.yml
+#   - configurable gear sets which provides certain buffs depending on the number of items equipped
+#
+##########
+
+Enabled: false
+ItemDisplay:
+  Name: '&aEquipo: {name}'
+  Values: '{equipped} : {lore}'
+GearSets:
+  exampleSet:
+    StartLevel: 1
+    EndLevel: 10
+    Weight: 5
+    DisplayName: '&aTipo de daño'
+    Buffs:
+      2:
+        InactiveLore: '&8Equipa 2 items de este set para obtener +5 de daño'
+        ActiveLore: '&bEquipa 2 items de este set para obtener +5 de daño'
+        Stats:
+          Damage: 5
+      4:
+        InactiveLore: '&8Equipa 4 items de este conjunto para obtener +10 de daño'
+        ActiveLore: '&bEquipa 4 items de este conjunto para obtener +10 de daño'
+        Override: true
+        Stats:
+          Damage: 10
+    Generation:
+      Rarity_Whitelist:
+      - Epic
+      - Legendary
+      Items_Blacklist:
+      - GOLDEN_SWORD
+      - DIAMOND_AXE
+RarityChances:
+  1:
+    Common: 0%
+    Uncommon: 1%
+    Rare: 3%
+    Epic: 5%
+    Legendary: 7.5%
+  10:
+    Common: 0%
+    Uncommon: 2%
+    Rare: 5%
+    Epic: 7.5%
+    Legendary: 10%

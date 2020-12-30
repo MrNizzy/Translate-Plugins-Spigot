@@ -1,0 +1,15 @@
+##########
+# leather.yml
+#   - configure leather color/chances
+#   - Use https://papermc.io/javadocs/paper/1.14/org/bukkit/Color.html for colors
+# ColorChances:
+#   Color: % Chance
+##########
+
+ColorChances:
+  Black: 5%
+  Red: 5%
+  Lime: 5%
+  Silver: 5%
+  Teal: 5%
+  Blue: 5%

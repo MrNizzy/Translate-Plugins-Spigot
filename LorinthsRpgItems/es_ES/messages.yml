@@ -1,0 +1,18 @@
+##########
+# messages.yml
+#   - configure different messages throughout the plugin
+##########
+Item:
+  Broken: '&cNo se puede usar el item, {itemname}&c. Porque esta roto.'
+  HigherLevel: '&cNo se puede usar el item, {itemname}&c. Porque es de un nivel superior.'
+Class:
+  NotProficient: '&c¡Tu clase no es adecuada para el item {itemName} en el espacio: {slotName}!'
+  Change: '&aAhora eres nivel &e{level} de tu clase {className}'
+EquipmentSlotNames:
+  MAIN_HAND: 'Mano principal'
+  OFF_HAND: 'Fuera de la mano'
+  HEAD: 'Cabeza'
+  CHEST: 'Pecho'
+  LEGS: 'Piernas'
+  FEET: 'Pies'
+  ACCESSORY: 'Accesorio'

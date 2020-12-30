@@ -1,0 +1,18 @@
+##########
+# messages.yml
+#   - configure different messages throughout the plugin
+##########
+Item:
+  Broken: '&cUnable to use item, {itemname}&c. Because it is broken'
+  HigherLevel: '&cUnable to use item, {itemname}&c. Because it is a higher level'
+Class:
+  NotProficient: '&cYour class is not proficient with the item {itemName} in slot {slotName}!'
+  Change: '&aYou are now a level &e{level} {className}'
+EquipmentSlotNames:
+  MAIN_HAND: 'Main Hand'
+  OFF_HAND: 'Off Hand'
+  HEAD: 'Head'
+  CHEST: 'Chest'
+  LEGS: 'Legs'
+  FEET: 'Feet'
+  ACCESSORY: 'Accessory'

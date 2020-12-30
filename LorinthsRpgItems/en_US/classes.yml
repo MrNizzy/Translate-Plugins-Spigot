@@ -1,0 +1,191 @@
+##########
+# classes.yml
+#   NOTE: If using this system the plugin will enforce 'LevelHook: BuiltIn' in config.yml
+#   - Flexible Class system for limiting equipment, giving bonuses per level, and eventually skills!
+#
+# Enabled: (true/false)
+# Classes:
+#   className:
+#     DisplayItem:
+#       Id: MATERIAL
+#       DisplayName: STRING
+#       Lore:
+#         - STRING
+#     Permission:
+#       Required: (true/false)
+#       Node: STRING
+#     Health:
+#       Base: INT
+#       PerLevel: DECIMAL
+#     Mana:
+#       Base: INT
+#       PerLevel: DECIMAL
+#     Stamina:
+#       Base: INT
+#       PerLevel: DECIMAL
+#     Buffs:
+#       level:
+#         AttributeId: Value or ValueRange
+#     Restrictions:
+#       Weapons:
+#         - MATERIAL
+#         - 'id:durability'
+#       Armor:
+#         - MATERIAL
+##########
+
+Enabled: true
+DefaultClass: Fighter
+GUI:
+  AutoPlace: false
+  Title: '&aClass Menu'
+  ClassTitle: '&a{className} Sub-Classes'
+  Select:
+    Text: '&eLeft click &ato select'
+    ClickType: 'LEFT'
+  Open:
+    Text: '&eRight click &ato Open'
+    ClickType: 'RIGHT'
+Classes:
+  Fighter:
+    Display:
+      Id: IRON_SWORD
+      DisplayName: '&cFighter'
+      Lore:
+        - '&7This guy wants to hack and slash!'
+      ItemFlags:
+        - HIDE_ATTRIBUTES
+    GuiSlot: 20
+    Permission:
+      Required: false
+    Health:
+      Base: 30
+      PerLevel: 1.0
+    Mana:
+      Base: 20
+      PerLevel: 0.5
+    Stamina:
+      Base: 20
+      PerLevel: 0.5
+    Subclasses:
+      - Barbarian
+    Buffs:
+      IsAdditive: true
+      1:
+        Damage: 1
+      3:
+        Damage: 1
+        Health: 1
+      5:
+        Health: 5
+    Restrictions:
+      Weapons:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLD_SWORD
+        - DIAMOND_SWORD
+        - WOODEN_AXE
+        - STONE_AXE
+        - IRON_AXE
+        - GOLD_AXE
+        - DIAMOND_AXE
+        - CROSSBOW
+      Armor:
+        - IRON_HELMET
+        - IRON_CHESTPLATE
+        - IRON_LEGGINGS
+        - IRON_BOOTS
+        - DIAMOND_HELMET
+        - DIAMOND_CHESTPLATE
+        - DIAMOND_LEGGINGS
+        - DIAMOND_BOOTS
+  Rogue:
+    Display:
+      Id: BOW
+      DisplayName: '&aRogue'
+      Lore:
+        - '&7Quick and evasive'
+      ItemFlags:
+        - HIDE_ATTRIBUTES
+    GuiSlot: 24
+    Permission:
+      Required: true
+      Nodes:
+        - 'lrm.rogue'
+    Health:
+      Base: 15
+      PerLevel: 0.5
+    Mana:
+      Base: 20
+      PerLevel: 0.5
+    Stamina:
+      Base: 20
+      PerLevel: 0.5
+    Buffs:
+      IsAdditive: true
+      1:
+        MovementSpeed: 1
+        DodgeChance: 1
+      5:
+        MovementSpeed: 1
+        DodgeChance: 1
+    Restrictions:
+      Weapons:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLD_SWORD
+        - DIAMOND_SWORD
+        - BOW
+        - CROSSBOW
+      Armor:
+        - LEATHER_HELMET
+        - LEATHER_CHESTPLATE
+        - LEATHER_LEGGINGS
+        - LEATHER_BOOTS
+        - IRON_HELMET
+        - IRON_CHESTPLATE
+        - IRON_LEGGINGS
+        - IRON_BOOTS
+  Barbarian:
+    Display:
+      Id: IRON_AXE
+      DisplayName: '&cBarbarian'
+      Lore:
+        - '&7This guy wants to hurt something!'
+      ItemFlags:
+        - HIDE_ATTRIBUTES
+    GuiSlot: 22
+    Permission:
+      Required: true
+      Nodes:
+        - 'lrm.barbarian'
+    Health:
+      Base: 35
+      PerLevel: 1.0
+    Mana:
+      Base: 20
+      PerLevel: 0.5
+    Stamina:
+      Base: 20
+      PerLevel: 1.0
+    Buffs:
+      IsAdditive: true
+      1:
+        Damage: 1
+    Restrictions:
+      Weapons:
+        - WOODEN_AXE
+        - STONE_AXE
+        - IRON_AXE
+        - GOLD_AXE
+        - DIAMOND_AXE
+        - CROSSBOW
+      Armor:
+        - IRON_HELMET
+        - IRON_CHESTPLATE
+        - IRON_LEGGINGS
+        - IRON_BOOTS
+    ClassPrerequisites:
+      Fighter: 20

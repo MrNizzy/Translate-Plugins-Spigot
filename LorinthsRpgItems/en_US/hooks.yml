@@ -1,0 +1,15 @@
+##########
+# hooks.yml
+#   - configure which plugins this plugin can interact with!
+#
+##########
+
+DungeonsXL: true
+Heroes: false
+McMMo: true
+MMOCore: true
+MythicDrops: true
+MythicMobs: true
+RpgInventory: true
+PlaceholderAPI: true
+SkillAPI: false

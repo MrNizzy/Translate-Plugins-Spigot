@@ -1,0 +1,42 @@
+##########
+# formulas.yml
+#   - configurable formulas to tweak the way your server calculates everything :D
+#   - leverages me.lorinth.utils.javascript methods in the Javascript folder
+#
+# BaseDamage: Calculates base damage before PvE / PvP
+# PvEDamage: Calculates damage in a PvE event (player hits mob)
+# PvPDamage: Calculates total damage in a PvP event (player hits player)
+# PvEDefenseModifier: Augments damage based on pve defense (mob hits player or vice versa)
+# PvPDefenseModifier: Augments damage based on pvp defense (player hits player)
+# TotalPvEDamage: final calulated pve damage result before effects
+# TotalPvPDamage: final calulated pvp damage result before effects
+# CriticalChance: Determines if a critical effect is triggered
+# CriticalDamage: Determines total damage after a critical effect
+# DodgeChance: Determines if the dodge effect is triggered
+# BlockChance: Determines if the block effect is triggered
+# BlockDamage: Damage calculated after a block is triggered
+# IsBlocking: Returns a 0 if the player isn't blocking or a 1 if the player is blocking
+# BurnChance: How much damage is dealt by burn
+# BurnDamage: Determine if the custom burn effect is triggered
+# PoisonChance: Determines if the custom poison effect is triggered
+# PoisonDamage: How much damage dealt by poison
+# VampirismAmount: Determines how much heal is gained in an attack event
+##########
+
+BaseDamage: '{event} + {damage}'
+PvEDamage: '{totalDamage} * ((100 + {pveDamage}) / 100.0)'
+PvPDamage: '{totalDamage} * ((100 + {pveDamage}) / 100.0)'
+PvEDefenseModifier: 'Math.min(0.9, (100.0 - (Math.max(0, (({defense} + ({defense} * ({pveDefense} / 100.0))) - {penetration})))) / 100.0)'
+PvPDefenseModifier: 'Math.min(0.9, (100.0 - (Math.max(0, (({defense} + ({defense} * ({pvpDefense} / 100.0))) - {penetration})))) / 100.0)'
+TotalPvEDamage: '{pveDamageResult} * {pveDefenseModifier}'
+TotalPvPDamage: '{pvpDamageResult} * {pvpDefenseModifier}'
+CriticalChance: 'rand(100) < {criticalChance}'
+CriticalDamage: '{totalDamage} * (1.5 + ({criticalDamage} / 100.0))'
+DodgeChance: 'rand(100) < ({dodgeChance} - ({dodgeChance} * ({accuracy} / 100.0)))'
+BlockChance: 'rand(100) < {blockChance} + ({isBlocking} * 10.0)'
+BlockDamage: '{totalDamage} - {blockDamage}'
+BurnChance: 'rand(100) < {burnChance}'
+BurnDamage: '{burnDamage}'
+PoisonChance: 'rand(100) < {poisonChance}'
+PoisonDamage: '{poisonDamage}'
+VampirismAmount: '{totalDamage} * ({vampirism} / 100.0)'

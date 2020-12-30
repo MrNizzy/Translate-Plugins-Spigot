@@ -1,0 +1,125 @@
+##########
+# materials.yml
+#   - default options for weapons
+#   - default options for armor
+#   - attribute blacklist for items
+#
+# Weapon:
+#   WeaponTier: (Wood, Stone, Iron, Gold, Diamond)
+#     Level:    (i.e. 1 = level 1+)
+#       AttributeName: value or range(value-value) for randomized value
+# Armor:
+#   ArmorTier:  (Leather, Chain, Iron, Gold, Diamond)
+#     Level:    (i.e. 1 = level 1+)
+#       AttributeName: value or range(value-value) for randomized value
+#
+# Custom: #Define id:durability for custom textured items
+#   'id:durability':  (i.e. '276:1' is a Diamond Sword with 1 less durability than max)
+#     Level:          (i.e. 1 = level 1+)
+#       AttributeName: value or range(value-value) for randomized value
+#
+# AttributeBlacklist:   Attributes listed under ItemTypes will not be added to the item type
+#                       Additionally modifications that will add a blacklisted attribute will be ignored
+#   ItemType: (Sword, Axe, Bow, Shield, Helmet, Chestplate, Leggings, Boots) OR Material: (WOODEN_SWORD, STONE_SWORD, etc) for specific control on items
+#   - AttributeName
+#   - AttributeName
+##########
+Weapon:
+  Wood:
+    1:
+      Damage: 3.0-4.0
+    20:
+      Damage: 3.5-4.5
+  Stone:
+    1:
+      Damage: 3.5-4.5
+    20:
+      Damage: 4.0-5.0
+  Iron:
+    1:
+      Damage: 4.0-5.0
+    20:
+      Damage: 4.5-5.5
+  Gold:
+    1:
+      Damage: 4.0-6.5
+    20:
+      Damage: 4.5-5.0
+  Diamond:
+    1:
+      Damage: 5.0-6.0
+    20:
+      Damage: 5.5-6.5
+Armor:
+  Leather:
+    1:
+      Defense: 3.0-5.0
+      MovementSpeed: 1.0-3.0
+    20:
+      Defense: 4.0-6.0
+      MovementSpeed: 2.0-4.0
+  Chain:
+    1:
+      Defense: 4.0-6.0
+      Damage: 1.0-1.5
+    20:
+      Defense: 5.0-7.0
+      Damage: 1.0-2.0
+  Iron:
+    1:
+      Defense: 5.0-7.0
+      PvEDefense: 4.0-5.0
+    20:
+      Defense: 6.0-8.0
+      PvEDefense: 5.0-6.0
+  Gold:
+    1:
+      Defense: 5.0-7.0
+      PvPDefense: 4.0-5.0
+    20:
+      Defense: 6.0-8.0
+      PvPDefense: 5.0-6.0
+  Diamond:
+    1:
+      Defense: 6.0-7.0
+      Health: 1.0
+    20:
+      Defense: 7.0-8.5
+      Health: 1.0-2.0
+Custom:
+  '276:1':
+    1:
+      Damage: 10.0-12.0
+    20:
+      Damage: 13.0-15.0
+  TRIDENT:
+    1:
+      Damage: 3.0-4.0
+    20:
+      Damage: 3.5-4.5
+AttributeBlacklist:
+  Sword:
+    - BlockChance
+    - BlockDamage
+    - Defense
+    - PvPDefense
+    - PvEDefense
+  Axe:
+    - BlockChance
+    - BlockDamage
+    - Defense
+    - PvPDefense
+    - PvEDefense
+  Bow:
+    - BlockChance
+    - BlockDamage
+    - Defense
+    - PvPDefense
+    - PvEDefense
+  Shield:
+    - Damage
+    - PvPDamage
+    - PvEDamage
+    - Vampirism
+  WOODEN_SWORD:
+    - BlockChance

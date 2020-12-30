@@ -1,0 +1,25 @@
+##########
+# config.yml
+#   - plugin hooks
+#   - drop chance
+#   - unbreakable rpg items
+#
+# LevelHook: Plugin to determine what level a player is
+#       BattleStats, BuiltIn, Heroes, MMOCore, SkillAPI, Vanilla
+#         Vanilla will use the amount of exp dropped on entity death
+#       BuiltIn will use values from experience.yml
+# FormulaMethod: Determines whether to use hard coded Java(fast) or fully customizable Javascript logic(slower)
+#       Java, Javascript
+# MonsterLevelHook: Plugin to determine what level a monster is (for drops)
+#       None, LorinthsRpgMobs, MythicMobs
+#       Using None results in all mob levels = 1 and is not recommended
+# ItemStatsView: How to view stats when using /itemstats
+#       Text, UiMenu, UiMenuNonZero
+# AutoSaveInterval: How often do you want to auto-save in minutes
+##########
+
+LevelHook: BuiltIn
+FormulaMethod: Java
+MonsterLevelHook: None
+ItemStatsView: UiMenuNonZero
+AutoSaveInterval: 10

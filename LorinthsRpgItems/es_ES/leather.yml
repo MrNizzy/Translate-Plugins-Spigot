@@ -1,0 +1,15 @@
+##########
+# leather.yml
+#   - Configurar el color / posibilidades del color de la armadura de cuero.
+#   - Usa https://papermc.io/javadocs/paper/1.14/org/bukkit/Color.html para colores
+# ColorChances:
+#   Color: % Chance
+##########
+
+ColorChances:
+  Black: 5%
+  Red: 5%
+  Lime: 5%
+  Silver: 5%
+  Teal: 5%
+  Blue: 5%

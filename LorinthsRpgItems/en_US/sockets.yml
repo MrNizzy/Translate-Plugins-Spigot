@@ -1,0 +1,87 @@
+##########
+# sockets.yml
+#   - configure socket gem functionality
+#
+# Enabled: (true / false) do you want to enable the socket system?
+# Chances:
+#   Slots: Chances to spawn socket slots on items
+#     level:
+#       rarityTier:
+#         slotCount: chance%
+#   Drops: Chances to drop socket gems
+#     level:
+#       Chance: chance to drop %
+#       socketGemId: weight - weight is handled different than %. Weight is item weight / total weight
+##########
+
+Enabled: false
+Display:
+  Header:
+    Enabled: true
+    Text: '&e----- Sockets -----'
+  Footer:
+    Enabled: true
+    Text: '&e------------------'
+  FilledSlot: '&a • {GemName}'
+  OpenSlot: '&e ◦ <slot>'
+Messages:
+  NoOpenSlots: '&cThat item has no open socket slots'
+  GearLowLevel: '&cThat item is not a high enough level for that quality of socket gem'
+  InvalidSlot: '&cThat item doesnt have that many slots'
+  FilledSlot:  '&cThere is already a gem in that slot! Remove the gem before inserting a new one'
+Chances:
+  Slots:
+    1:
+      Common:
+        0: 100%
+      Uncommon:
+        0: 80%
+        1: 20%
+      Rare:
+        0: 60%
+        1: 30%
+        2: 10%
+      Epic:
+        0: 40%
+        1: 35%
+        2: 20%
+        3: 5%
+      Legendary:
+        0: 20%
+        1: 35%
+        2: 25%
+        3: 15%
+        4: 5%
+  Drops:
+    1:
+      Chance: 5%
+      damageGem: 10
+      healthGem: 10
+
+Gems:
+  damageGem:
+    Id: EMERALD
+    DisplayName: '&cDamage Gem I'
+    Lore:
+      - '&7Insert this &agem &7into an open'
+      - '{OpenSlot}'
+      - ''
+      - '&eBonuses:'
+      - '{Bonuses}'
+    MinimumLevel: 1
+    Bonuses:
+      Damage: 1
+    CanStack: true
+  healthGem:
+    Id: EMERALD
+    DisplayName: '&aHealth Gem I'
+    Lore:
+      - '&7Insert this &agem &7into an open'
+      - '{OpenSlot}'
+      - ''
+      - '&eBonuses:'
+      - '{Bonuses}'
+    MinimumLevel: 1
+    Bonuses:
+      Health: 1
+    CanStack: true

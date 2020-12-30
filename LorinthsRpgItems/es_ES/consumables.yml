@@ -1,0 +1,28 @@
+exampleConsumable:
+  Item:
+    Id: APPLE
+    DisplayName: '&aEjemplo de consumible'
+    Lore:
+    - '&7Este item le proporciona &aSalud &e+5'
+    - '&7y aumenta tu &cFuerza &7por &e30 segundos'
+  Level: 1
+  Sound: ENTITY_GENERIC_EAT
+  RemoveOnDeath: true
+  EatingDuration: 1.0
+  Cooldown: 30.0
+  Duration: 30.0
+  Heal: 5.0
+  Mana: 5.0
+  Stamina: 5.0
+  Food: 5.0
+  Tags:
+  - 'Ejemplo'
+  Buffs:
+    Damage: 1
+  PotionEffects:
+    Increase_Damage: 1
+  Commands:
+  - "console: say ¡{player} está comiendo un consumible de ejemplo!"
+  Radius: 0.0
+  Events:
+    OnPickup: CONSUME

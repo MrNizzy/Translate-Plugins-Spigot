@@ -1,0 +1,159 @@
+##########
+# rarity.yml
+#   - Configurable rarity tiers
+#
+# Rarity:
+#   RarityTier: (Common, Uncommon, Rare, Epic, Legendary)
+#     Display: Displayed on item lore
+#     ColorCode: Colors item display name, and rarity display
+#     Modifications: How many modifications do we want to add to items (modifications.yml)
+#     AttributeMultiplier: Multiplies attributes after modifications have been applied (set to 1.0 to disable)
+#     Materials: What types of items do we want to spawn at this rarity?
+#
+# RarityChance:
+#   MobDrops: - Used for generation from items dropped by mobs
+#     Level: (ex. 1 = levels 1+)
+#       RarityTier: Weight
+#   Crafted: - Used for generation from items crafted by players
+#
+# Weight System
+#   - The way weight systems work is be adding all weights together then dividing by a specified value to
+#       calculate the chance of a tier
+##########
+
+Rarity:
+  Common:
+    Display: 'Common'
+    ColorCode: '&7'
+    Modifications: 1
+    AttributeMultiplier: 1.0
+    Materials:
+    - WOOD_SWORD
+    - WOOD_AXE
+    - STONE_SWORD
+    - STONE_AXE
+    - BOW
+    - SHIELD
+    - LEATHER_HELMET
+    - LEATHER_CHESTPLATE
+    - LEATHER_LEGGINGS
+    - LEATHER_BOOTS
+    - CHAINMAIL_HELMET
+    - CHAINMAIL_CHESTPLATE
+    - CHAINMAIL_LEGGINGS
+    - CHAINMAIL_BOOTS
+  Uncommon:
+    Display: 'Uncommon'
+    ColorCode: '&a'
+    Modifications: 1
+    AttributeMultiplier: 1.1
+    Materials:
+    - STONE_SWORD
+    - STONE_AXE
+    - IRON_SWORD
+    - IRON_AXE
+    - GOLD_SWORD
+    - GOLD_AXE
+    - BOW
+    - SHIELD
+    - CHAINMAIL_HELMET
+    - CHAINMAIL_CHESTPLATE
+    - CHAINMAIL_LEGGINGS
+    - CHAINMAIL_BOOTS
+    - IRON_HELMET
+    - IRON_CHESTPLATE
+    - IRON_LEGGINGS
+    - IRON_BOOTS
+    - GOLD_HELMET
+    - GOLD_CHESTPLATE
+    - GOLD_LEGGINGS
+    - GOLD_BOOTS
+  Rare:
+    Display: 'Rare'
+    ColorCode: '&b'
+    Modifications: 2
+    AttributeMultiplier: 1.2
+    Materials:
+    - IRON_SWORD
+    - IRON_AXE
+    - GOLD_SWORD
+    - GOLD_AXE
+    - DIAMOND_SWORD
+    - DIAMOND_AXE
+    - BOW
+    - CROSSBOW
+    - SHIELD
+    - IRON_HELMET
+    - IRON_CHESTPLATE
+    - IRON_LEGGINGS
+    - IRON_BOOTS
+    - GOLD_HELMET
+    - GOLD_CHESTPLATE
+    - GOLD_LEGGINGS
+    - GOLD_BOOTS
+    - DIAMOND_HELMET
+    - DIAMOND_CHESTPLATE
+    - DIAMOND_LEGGINGS
+    - DIAMOND_BOOTS
+  Epic:
+    Display: 'Epic'
+    ColorCode: '&4'
+    Modifications: 2
+    AttributeMultiplier: 1.3
+    Materials:
+    - IRON_SWORD
+    - IRON_AXE
+    - GOLD_SWORD
+    - GOLD_AXE
+    - DIAMOND_SWORD
+    - DIAMOND_AXE
+    - BOW
+    - CROSSBOW
+    - SHIELD
+    - IRON_HELMET
+    - IRON_CHESTPLATE
+    - IRON_LEGGINGS
+    - IRON_BOOTS
+    - GOLD_HELMET
+    - GOLD_CHESTPLATE
+    - GOLD_LEGGINGS
+    - GOLD_BOOTS
+    - DIAMOND_HELMET
+    - DIAMOND_CHESTPLATE
+    - DIAMOND_LEGGINGS
+    - DIAMOND_BOOTS
+  Legendary:
+    Display: 'Legendary'
+    ColorCode: '&6'
+    Modifications: 3
+    AttributeMultiplier: 1.5
+    Materials:
+    - DIAMOND_SWORD
+    - DIAMOND_AXE
+    - BOW
+    - CROSSBOW
+    - SHIELD
+    - DIAMOND_HELMET
+    - DIAMOND_CHESTPLATE
+    - DIAMOND_LEGGINGS
+    - DIAMOND_BOOTS
+RarityChance:
+  MobDrops:
+    1:
+      Common: 200 # (200 / 337) = 59.3%
+      Uncommon: 90 # (90 / 337) = 26.7%
+      Rare: 30 # (30 / 337) = 8.9%
+      Epic: 15 # (15 / 337) = 4.5%
+      Legendary: 2 # (2 / 337)) = 0.6%
+    20:
+      Common: 150
+      Uncommon: 90
+      Rare: 30
+      Epic: 15
+      Legendary: 2
+  Crafted:
+    Enabled: true
+    1:
+      Common: 200
+      Uncommon: 50
+      Rare: 10

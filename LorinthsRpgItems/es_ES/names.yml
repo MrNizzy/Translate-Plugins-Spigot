@@ -1,0 +1,87 @@
+##########
+# names.yml
+#   - le permite configurar el nombre generado aleatoriamente en función del material / item
+#
+# materiales: Wood, Leather, Stone, Iron, Gold, Diamond
+# items: Shield, Sword, Axe, Bow, Helmet, Chest, Leg, Boot
+# Custom:
+#   'id:durability':
+#     - list
+#     - of
+#     - names
+##########
+
+Material:
+  Wood:
+  - 'Madera'
+  - 'de madera'
+  - 'Astilla'
+  - 'Lento(a)'
+  Leather:
+  - 'Cuero'
+  - 'Paño'
+  - 'Piel'
+  Stone:
+  - 'Piedra'
+  - 'Roca'
+  - 'Afilado(a)'
+  - 'Pedernal'
+  Iron:
+  - 'Hierro'
+  - 'Hierro fundido'
+  - 'Acero'
+  - 'Acero oscuro'
+  - 'Oxidado(a)'
+  Gold:
+  - 'Oro'
+  - 'Dorado(a)'
+  - 'Midas'
+  - 'Enriquecido(a)'
+  - 'Maleable'
+  Diamond:
+  - 'Diamante'
+  - 'Cristal'
+  - 'Magnífico(a)'
+Item:
+  Shield:
+  - 'Escudo'
+  - 'Escudo de mano'
+  - 'Escudo de cometa'
+  - 'Escudo de torre'
+  Sword:
+  - 'Espada'
+  - 'Cuchilla'
+  - 'Katana'
+  - 'Daga'
+  Axe:
+  - 'Hacha'
+  - 'Hacha de mano'
+  - 'Cuchillo de carnicero'
+  Bow:
+  - 'Arco'
+  - 'Arco corto'
+  - 'Arco largo'
+  - 'Arco compuesto'
+  Helmet:
+  - 'Casco'
+  - 'Gorro'
+  - 'Sombrero'
+  - 'Capucha'
+  Chest:
+  - 'Peto'
+  - 'Coraza'
+  - 'Malla'
+  - 'Cota de malla'
+  Leg:
+  - 'Polainas'
+  - 'Pantalones'
+  - 'Calzas'
+  - 'Bombachos'
+  Boot:
+  - 'Botas'
+  - 'Zapatos'
+  - 'Escarpes'
+Custom:
+  '276:1':
+  - 'Espada divina de la muerte ardiente'
+  - 'Estúpida hoja rota de fealdad'

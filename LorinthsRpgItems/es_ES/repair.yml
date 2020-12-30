@@ -1,0 +1,68 @@
+##########
+# repair.yml
+#   - configure repair functionality if using Custom Durability
+#
+# useMcMMoRepair: (true/false) - do you want to let mcmmo repair work with custom durability?
+# allowItemClickRepair: (true/false) - do you want to let players use materials to repair their gear?
+# useMultiBlockStructure: (true/false) - do you want to use a multi block structure for rpg item anvil repairs?
+# Messages:
+#   Repair (string) - what message do you want sent to players on repair? (args: amount) - leave empty for no message
+#   FullDurability: (string) - What message do you want sent to the players when their item doesn't need to be repaired
+# RepairMaterials:
+#   MATERIAL: (Decimal) - Repair Value per material. If you want to use custom items with durability this can take id:durability
+#
+##########
+
+Enabled: true
+useMcMMoRepair: false
+allowItemClickRepair: false
+useMultiBlockStructure: true
+Messages:
+  Repair: '&aSe reparo el item en {amount} puntos'
+  FullDurability: '&cEste item ya está reparado'
+  CreatedMultiblockStructure: '&a¡Creaste una estructura de reparación rpg!'
+  DestroyedMultiblockStructure: '&c¡Destruiste una estructura de reparación rpg!'
+RepairMaterials:
+  DIAMOND: 250.0
+  IRON_INGOT: 125.0
+  GOLD_INGOT: 50.0
+  COBBLESTONE: 1.0
+CustomRepairMaterials:
+  repair100:
+    Id: 1
+    DisplayName: '&aItem de reparación personalizado'
+    Lore:
+    - '&7Cuando se usa este item en la reparación de Rpg'
+    - '&7puede reparar &e100 &7puntos durabilidad'
+    RepairValue: 100.0
+GUI:
+  Title: '&aMenú de reparación'
+  SingleRepairClick: LEFT
+  MultiRepairClick: SHIFT_LEFT
+  Rows: 3
+  Slots:
+    Instruction: 0
+    RepairValues: 18
+    TargetRepairItem: 11
+    RepairMaterial: 13
+    Result: 16
+  Items:
+    Instructions:
+      Id: '339:0'
+      DisplayName: '&aInstrucciones'
+      Lore:
+      - '&71) Seleccione un item para reparar'
+      - '&72) Seleccione un material de reparación'
+      - ''
+      - '&a&nReparando'
+      - '&e&lClick izquierdo &r&7- Reparar usando el item una vez'
+      - '&e&lShift + Click izquierdo &r&7- Repara hasta que esté'
+      - '&7completo o el material se haya agotado'
+    RepairValues:
+      Id: '265:0'
+      DisplayName: '&aMateriales de reparación'
+      Lore:
+      - '{material} = {value}'
+    LockedSlot:
+      Id: '160:7'
+      DisplayName: ''

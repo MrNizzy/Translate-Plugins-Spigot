@@ -1,0 +1,92 @@
+##########
+# effects.yml
+#   - configurable text/sound/particles for effects
+#
+# EffectType:
+#   UserText: Text sent to the user of the effect
+#   TargetText: Text sent to the other user
+#   Sound: Sound played at the user's position
+#   Particles:
+#     Count: Number of particles spawned
+#     Spread: offset from center location
+#     Particle: Displayed Particle (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html)
+#     Data: value given to specific Particles (required for, BLOCK_CRACK, BLOCK_DUST, ITEM_CRACK)
+#   UseHologram: true/false - Do you want to spawn a hologram when the effect triggers?
+#   HologramLines: - lines displayed in a given hologram
+#   HologramRadius: - distance used for displaying holograms
+##########
+
+Damage:
+  UserText: ''
+  TargetText: ''
+  UseHologram: true
+  HologramLines:
+  - '&c - {value}'
+  HologramRadius: 10.0
+Heal:
+  UserText: ''
+  TargetText: ''
+  UseHologram: true
+  HologramLines:
+  - '&a + {value}'
+  HologramRadius: 10.0
+Block:
+  UserText: '&a< BLOQUEADO >'
+  TargetText: ''
+  Sound: BLOCK_ANVIL_LAND
+  Particles:
+    Count: 20
+    Spread: 0.3
+    Particle: BLOCK_CRACK
+    Data: IRON_BLOCK
+  UseHologram: true
+  HologramLines:
+  - '&a< BLOQUEAR >'
+Dodge:
+  UserText: '&a< ESQUIVADO >'
+  TargetText: ''
+  Sound: ENTITY_ENDER_DRAGON_FLAP
+  Particles:
+    Count: 20
+    Spread: 0.3
+    Particle: SMOKE_NORMAL
+    Data: 0
+  UseHologram: true
+  HologramLines:
+  - '&a< ESQUIVAR >'
+Critical:
+  UserText: ''
+  TargetText: '&a< CRÍTICO >'
+  Sound: ENTITY_PLAYER_ATTACK_SWEEP
+  Particles:
+    Count: 20
+    Spread: 0.3
+    Particle: CRIT
+    Data: 0
+  UseHologram: true
+  HologramLines:
+  - '&a< CRÍTICO >'
+Burn:
+  UserText: ''
+  TargetText: '&c< QUEMADURA >'
+  Sound: ENTITY_PLAYER_HURT_ON_FIRE
+  Particles:
+    Count: 20
+    Spread: 0.5
+    Particle: LAVA
+    Data: 0
+  UseHologram: true
+  HologramLines:
+  - '&a< QUEMAR >'
+Poison:
+  UserText: ''
+  TargetText: '&c< ENVENENAR >'
+  Sound: ENTITY_SPLASH_POTION_BREAK
+  Particles:
+    Count: 20
+    Spread: 0.5
+    Particle: VILLAGER_HAPPY
+    Data: 0
+  UseHologram: true
+  HologramLines:
+  - '&a< ENVENENAR >'

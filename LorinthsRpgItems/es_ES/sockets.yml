@@ -1,0 +1,87 @@
+##########
+# sockets.yml
+#   - configure socket gem functionality
+#
+# Enabled: (true / false) do you want to enable the socket system?
+# Chances:
+#   Slots: Chances to spawn socket slots on items
+#     level:
+#       rarityTier:
+#         slotCount: chance%
+#   Drops: Chances to drop socket gems
+#     level:
+#       Chance: chance to drop %
+#       socketGemId: weight - weight is handled different than %. Weight is item weight / total weight
+##########
+
+Enabled: false
+Display:
+  Header:
+    Enabled: true
+    Text: '&e----- Gemas ------'
+  Footer:
+    Enabled: true
+    Text: '&e------------------'
+  FilledSlot: '&a • {GemName}'
+  OpenSlot: '&e ◦ <espacio>'
+Messages:
+  NoOpenSlots: '&cEste item no tiene ranuras para gemas.'
+  GearLowLevel: '&cEste item tiene un nivel lo suficientemente alto para esa calidad de gema.'
+  InvalidSlot: '&cEste item no tiene tantos espacios'
+  FilledSlot:  '&c¡Ya hay una gema en esa ranura! Retire la gema antes de insertar una nueva.'
+Chances:
+  Slots:
+    1:
+      Common:
+        0: 100%
+      Uncommon:
+        0: 80%
+        1: 20%
+      Rare:
+        0: 60%
+        1: 30%
+        2: 10%
+      Epic:
+        0: 40%
+        1: 35%
+        2: 20%
+        3: 5%
+      Legendary:
+        0: 20%
+        1: 35%
+        2: 25%
+        3: 15%
+        4: 5%
+  Drops:
+    1:
+      Chance: 5%
+      damageGem: 10
+      healthGem: 10
+
+Gems:
+  damageGem:
+    Id: EMERALD
+    DisplayName: '&cGema de daño I'
+    Lore:
+      - '&7Inserta esta &agema &7en una ranura'
+      - '{OpenSlot}'
+      - ''
+      - '&eBonos:'
+      - '{Bonuses}'
+    MinimumLevel: 1
+    Bonuses:
+      Damage: 1
+    CanStack: true
+  healthGem:
+    Id: EMERALD
+    DisplayName: '&aGema de vida I'
+    Lore:
+      - '&7Inserta esta &agema &7en una ranura'
+      - '{OpenSlot}'
+      - ''
+      - '&eBonos:'
+      - '{Bonuses}'
+    MinimumLevel: 1
+    Bonuses:
+      Health: 1
+    CanStack: true

@@ -1,0 +1,24 @@
+# 
+# combat.yml
+#   - PvP settings and messages
+PvP:
+  Enabled: true
+  EnabledWorlds:
+  - pvp_world
+  DisabledWorlds:
+  - safe_world
+  Players:
+    TogglingEnabled: true
+    TogglingDelay: 100
+    CombatDelay: 100
+    Enabled:
+    - edf1b35c-b753-3d1c-a125-27a0b865ec1e
+    Disabled:
+    - c63c45ee-8b0c-4834-bd07-da563810d9d2
+Messages:
+  TogglingIsDisabled: ¡Esa función está desactivada en este servidor!
+  ToggleDelay: Tienes que esperar {delay} segundo(s) antes de hacer eso.
+  CombatDelay: ¡Actualmente estás en combate y no puedes hacer eso! ¡Espere {delay} segundo(s) más!
+  CantAttackPlayer: ¡No puedes atacar a ese jugador aquí!
+  PvpEnabled: '&cHas habilitado el PvP'
+  PvpDisabled: '&aHas desactivado el PvP'

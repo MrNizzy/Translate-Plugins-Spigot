@@ -1,0 +1,9 @@
+##########
+# messages.yml
+#   - configures mobs to have rpg stats based on Rpg Mobs Level
+##########
+
+ZOMBIE:
+  1:
+    Health: 2 # La vida se considera como un bono
+    Defense: 10

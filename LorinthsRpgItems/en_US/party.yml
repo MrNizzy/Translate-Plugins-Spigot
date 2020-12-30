@@ -1,0 +1,66 @@
+##########
+# party.yml
+#   - allows you to configure party details
+##########
+
+Enabled: true
+VerboseLogging: false
+Options:
+  MaxPlayerCount: 6
+  LootOptions:
+    UseSharedInventory: true
+  ExpSharing:
+    MaxDistance: 50
+    MaxLevelRange: 5
+    PlayerCountModifier:
+      1: 1.0
+      2: 0.75
+      3: 0.6
+      4: 0.5
+      5: 0.4
+      6: 0.35
+PartyInfoFormat:
+  - '&b============ &eParty Info &b============'
+  - '&bId: &e{id}'
+  - '&bParty Name: &e{name}'
+  - '&bPassword: &e{password}'
+  - '&bLeader: &e{leaderName}'
+  - '&bMembers'
+  - '{members}'
+  - '&b=================================='
+MemberInfoFormat:
+  - '  &e{name}'
+  - '  &bLevel {level} {class} &b- &eEXP {experience_percent}'
+Messages:
+  Created: '&bYou have created a party!'
+  InviteOthers: '&bInvite others with &e/lri party invite <player>'
+  Invite: '&bYou have been invited to {partyName}. Use &e/lri party accept &bor &c/lri party decline'
+  InviteSent: '&bYou have invited &e{player}.'
+  InviteDeclined: '&cYou have declined the invitation'
+  InviteDeclinedNotification: '&c{player} &chas declined your invitation'
+  Promote: '{player} &bwas promoted as the party leader'
+  LootPickedUp: '{player} &bpicked up a {item}'
+  LeaveMessages:
+    Kicked: '{player} &cwas kicked from the party'
+    KickedTarget: '&cYou were kicked from the party'
+    Disband: '&cThe party was disbanded'
+    Disbanded: '&cYou have disbanded the party'
+    Leave: '{player} &cleft the party'
+    LeaveTarget: '&cYou left the party'
+  JoinMessages:
+    InviteAccept: '{player} &bhas joined the party'
+    Join: '{player} &bhas joined the party using the password'
+  Errors:
+    AlreadyInParty: '&cYou are already in a party'
+    NotInParty: '&cYou are not in a party'
+    NotInYourParty: '&cThat player is not in your party'
+    NotTheLeader: '&cYou are not the leader of the party'
+    PlayerNotFound: '&cPlayer not found'
+    NotInvited: "&cYou don't have any pending invites"
+    PartyFull: "&cThe party you were invited to is now full"
+    PromoteFirst: "&cYou must promote a member before leaving your party"
+    LeaderCantLeave: "&cYou can't leave as the leader of a party. Use &e/lri party disband &cinstead"
+    CantInviteSelf: "&cYou can't invite yourself!"
+    CantKickSelf: "&cYou can't kick yourself!"
+    CantPromoteSelf: "&cYou can't promote yourself because you're already the leader!"
+    TargetInParty: "&c{player} &cis already in a party!"

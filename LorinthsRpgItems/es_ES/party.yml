@@ -1,0 +1,66 @@
+##########
+# party.yml
+#   - allows you to configure party details
+##########
+
+Enabled: true
+VerboseLogging: false
+Options:
+  MaxPlayerCount: 6
+  LootOptions:
+    UseSharedInventory: true
+  ExpSharing:
+    MaxDistance: 50
+    MaxLevelRange: 5
+    PlayerCountModifier:
+      1: 1.0
+      2: 0.75
+      3: 0.6
+      4: 0.5
+      5: 0.4
+      6: 0.35
+PartyInfoFormat:
+  - '&b===== &eInfo. de grupo &b====='
+  - '&bId: &e{id}'
+  - '&bNombre del grupo: &e{name}'
+  - '&bContraseña: &e{password}'
+  - '&bLíder: &e{leaderName}'
+  - '&bMiembros'
+  - '{members}'
+  - '&b============================'
+MemberInfoFormat:
+  - '  &e{name}'
+  - '  &bNivel {level} {class} &b- &eEXP {experience_percent}'
+Messages:
+  Created: '&b¡Has creado un grupo!'
+  InviteOthers: '&bInvita a otros con &e/lri party invite <player>'
+  Invite: '&bTe han invitado a {partyName}. Usa &e/lri party accept &bpara acceptar o &c/lri party decline &bpara rechazar.'
+  InviteSent: '&bHas invitado &e{player}.'
+  InviteDeclined: '&cHas rechazado la invitación'
+  InviteDeclinedNotification: '&c{player} &cha rechazado tu invitación'
+  Promote: '{player} &bfue ascendido como líder del grupo.'
+  LootPickedUp: '{player} &brecogió {item}'
+  LeaveMessages:
+    Kicked: '{player} &cfue echado del grupo.'
+    KickedTarget: '&cTe han echado del grupo'
+    Disband: '&cEl grupo se disolvió'
+    Disbanded: '&cHas disuelto el grupo'
+    Leave: '{player} &cdejó el grupo'
+    LeaveTarget: '&cDejaste el grupo'
+  JoinMessages:
+    InviteAccept: '{player} &bse ha unido al grupo'
+    Join: '{player} &bse ha unido al grupo usando la contraseña'
+  Errors:
+    AlreadyInParty: '&cYa estas en un grupo'
+    NotInParty: '&cNo estas en un grupo'
+    NotInYourParty: '&cEse(a) jugador(a) no está en tu grupo'
+    NotTheLeader: '&cNo eres el líder del grupo'
+    PlayerNotFound: '&cJugador(a) no encontrado'
+    NotInvited: "&cNo tienes invitaciones pendientes"
+    PartyFull: "&cEl grupo al que fuiste invitado está lleno"
+    PromoteFirst: "&cDebes promover a un miembro antes de dejar tu grupo."
+    LeaderCantLeave: "&cNo puedes irte como líder del grupo. Usa &e/lri party disband &cen su lugar"
+    CantInviteSelf: "&c¡No puedes invitarte a ti mismo!"
+    CantKickSelf: "&c¡No puedes expulsarte a ti mismo!"
+    CantPromoteSelf: "&c¡No puedes promoverte porque ya eres el líder!"
+    TargetInParty: "&c¡{player} &cya esta en un grupo!"

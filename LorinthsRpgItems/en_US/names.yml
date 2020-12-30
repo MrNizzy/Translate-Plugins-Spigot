@@ -1,0 +1,92 @@
+##########
+# names.yml
+#   - allows you to configure the randomly generate name based on material/item
+#
+# materials: Wood, Leather, Stone, Iron, Gold, Diamond
+# items: Shield, Sword, Axe, Bow, Helmet, Chest, Leg, Boot
+# Custom:
+#   'id:durability':
+#     - list
+#     - of
+#     - names
+##########
+
+Material:
+  Wood:
+  - 'Wood'
+  - 'Wooden'
+  - 'Splintered'
+  - 'Pokey'
+  Leather:
+  - 'Leather'
+  - 'Cloth'
+  - 'Pelt'
+  Stone:
+  - 'Stone'
+  - 'Rock'
+  - 'Sharpened'
+  - 'Flint'
+  Iron:
+  - 'Iron'
+  - 'Cast-Iron'
+  - 'Steel'
+  - 'Dark Steel'
+  - 'Rusty'
+  Gold:
+  - 'Gold'
+  - 'Golden'
+  - 'Midas'
+  - 'Enriched'
+  - 'Malleable'
+  Diamond:
+  - 'Diamond'
+  - 'Crystal'
+  - 'Magnificent'
+Item:
+  Shield:
+  - 'Shield'
+  - 'Buckler'
+  - 'Heater'
+  - 'Kite Shield'
+  - 'Tower Shield'
+  Sword:
+  - 'Sword'
+  - 'Blade'
+  - 'Katana'
+  - 'Dagger'
+  Axe:
+  - 'Axe'
+  - 'Hatchet'
+  - 'Hand-Axe'
+  - 'Cleaver'
+  Bow:
+  - 'Bow'
+  - 'Shortbow'
+  - 'Longbow'
+  - 'Composite Bow'
+  Helmet:
+  - 'Helmet'
+  - 'Cap'
+  - 'Hat'
+  - 'Barbute'
+  - 'Sallet'
+  Chest:
+  - 'Chestplate'
+  - 'Brigandine'
+  - 'Cuirass'
+  - 'Mail'
+  - 'Hauberk'
+  Leg:
+  - 'Leggings'
+  - 'Pants'
+  - 'Breeches'
+  - 'Chausses'
+  - 'Trousers'
+  Boot:
+  - 'Boots'
+  - 'Greaves'
+  - 'Sabatons'
+Custom:
+  '276:1':
+  - 'Firey Godsword of Death'
+  - 'Stupid broken blade of Ugliness'

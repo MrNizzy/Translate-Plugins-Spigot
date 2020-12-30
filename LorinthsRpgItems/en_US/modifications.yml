@@ -1,0 +1,278 @@
+##########
+# modifications.yml
+#   - configurable randomly selected modifications added to rpg items
+# Config:
+#   MinimumLevel: 0 - usually 0
+#   MaximumLevel: 100 - whatever the level cap of your level hooked plugin is. (Used for built-in level cap)
+#   MaximumItemLevel: 200 - whatever level you want to cap the itemlevel feature at. Set equal to MaximumLevel to disable item level
+#
+# identifier:
+#   StartLevel: lower limit of levels mod applies to (inclusive)
+#   EndLevel: upper limit of levels mod applies to (non inclusive)
+#   Weight: chance to be selected out of pool of valid enchants
+#   Prefix: Text applied to the front of an item name
+#   Suffix: Text applied to the end of an item name
+#   CanDuplicate: Do you want the modification to be able to apply more than once to an item?
+#   Attributes:
+#     Vampirism: 1.0 # Attribute Identifier (from config.yml) value must be decimal
+##########
+
+Config:
+  MinimumLevel: 0
+  MaximumLevel: 50
+  MaximumItemLevel: 100
+Vamp1:
+  StartLevel: 1
+  EndLevel: 10
+  Prefix: 'Minor Vampiric'
+  Suffix: 'of the Vampire'
+  CanDuplicate: true
+  Attributes:
+    Damage: 1.0
+    Vampirism: 1.0-2.0
+Vamp2:
+  StartLevel: 10
+  EndLevel: 20
+  Prefix: 'Vampiric'
+  Suffix: 'of the Vampire'
+  CanDuplicate: true
+  Attributes:
+    Damage: 1.0-2.0
+    Vampirism: 2.0-3.0
+Vamp3:
+  StartLevel: 20
+  EndLevel: 30
+  Prefix: 'Vampiric'
+  Suffix: 'of the Vampire'
+  CanDuplicate: true
+  Attributes:
+    Damage: 2.0-3.0
+    Vampirism: 2.0-4.0
+Vamp4:
+  StartLevel: 30
+  EndLevel: 40
+  Prefix: 'Vampiric'
+  Suffix: 'of the Vampire'
+  CanDuplicate: true
+  Attributes:
+    Damage: 2.0-4.0
+    Vampirism: 3.0-5.0
+Vamp5:
+  StartLevel: 40
+  EndLevel: 50
+  Prefix: 'Great Vampiric'
+  Suffix: 'of the Great Vampire'
+  CanDuplicate: true
+  Attributes:
+    Damage: 3.0-4.0
+    Vampirism: 4.0-6.0
+Healthy1:
+  StartLevel: 1
+  EndLevel: 10
+  Prefix: 'Minor Healthy'
+  Suffix: 'of Minor Health'
+  CanDuplicate: true
+  Attributes:
+    Health: 1.0-2.0
+Healthy2:
+  StartLevel: 10
+  EndLevel: 20
+  Prefix: 'Healthy'
+  Suffix: 'of Health'
+  CanDuplicate: true
+  Attributes:
+    Health: 2.0-4.0
+Healthy3:
+  StartLevel: 20
+  EndLevel: 30
+  Prefix: 'Healthy'
+  Suffix: 'of Health'
+  CanDuplicate: true
+  Attributes:
+    Health: 3.0-6.0
+Healthy4:
+  StartLevel: 30
+  EndLevel: 40
+  Prefix: 'Greater Healthy'
+  Suffix: 'of Greater Health'
+  CanDuplicate: true
+  Attributes:
+    Health: 4.0-8.0
+Healthy5:
+  StartLevel: 40
+  EndLevel: 50
+  Prefix: 'Greater Healthy'
+  Suffix: 'of Greater Health'
+  CanDuplicate: true
+  Attributes:
+    Health: 5.0-10.0
+Quick1:
+  StartLevel: 1
+  EndLevel: 10
+  Prefix: 'Minor Quick'
+  Suffix: 'of the Cheetah'
+  CanDuplicate: true
+  Attributes:
+    MovementSpeed: 1.0-2.0
+Quick2:
+  StartLevel: 10
+  EndLevel: 20
+  Prefix: 'Quick'
+  Suffix: 'of the Cheetah'
+  CanDuplicate: true
+  Attributes:
+    MovementSpeed: 1.5-2.5
+Quick3:
+  StartLevel: 20
+  EndLevel: 30
+  Prefix: 'Quick'
+  Suffix: 'of the Cheetah'
+  CanDuplicate: true
+  Attributes:
+    MovementSpeed: 2.0-3.5
+Quick4:
+  StartLevel: 30
+  EndLevel: 40
+  Prefix: 'Quick'
+  Suffix: 'of the Cheetah'
+  CanDuplicate: true
+  Attributes:
+    MovementSpeed: 2.5-4.0
+Quick5:
+  StartLevel: 40
+  EndLevel: 50
+  Prefix: 'Greater Quick'
+  Suffix: 'of the Cheetah'
+  CanDuplicate: true
+  Attributes:
+    MovementSpeed: 3.5-4.5
+Block1:
+  StartLevel: 1
+  EndLevel: 10
+  Prefix: 'Minor Blocking'
+  Suffix: 'of Minor Blocking'
+  CanDuplicate: true
+  Attributes:
+    BlockChance: 1.0-2.0
+    BlockDamage: 1.0-3.0
+Block2:
+  StartLevel: 10
+  EndLevel: 20
+  Prefix: 'Blocking'
+  Suffix: 'of Blocking'
+  CanDuplicate: true
+  Attributes:
+    BlockChance: 2.0-3.5
+    BlockDamage: 2.0-4.0
+Block3:
+  StartLevel: 20
+  EndLevel: 30
+  Prefix: 'Blocking'
+  Suffix: 'of Blocking'
+  CanDuplicate: true
+  Attributes:
+    BlockChance: 3.0-5.0
+    BlockDamage: 2.0-4.0
+Block4:
+  StartLevel: 30
+  EndLevel: 40
+  Prefix: 'Greater Blocking'
+  Suffix: 'of Greater Blocking'
+  CanDuplicate: true
+  Attributes:
+    BlockChance: 4.0-5.0
+    BlockDamage: 2.5-5.0
+Block5:
+  StartLevel: 40
+  EndLevel: 50
+  Prefix: 'Greater Blocking'
+  Suffix: 'of Greater Blocking'
+  CanDuplicate: true
+  Attributes:
+    BlockChance: 5.0-6.0
+    BlockDamage: 3.5-6.0
+Dodge1:
+  StartLevel: 1
+  EndLevel: 10
+  Prefix: 'Minor Dodging'
+  Suffix: 'of Minor Dodging'
+  CanDuplicate: true
+  Attributes:
+    DodgeChance: 1.0-2.0
+Dodge2:
+  StartLevel: 10
+  EndLevel: 20
+  Prefix: 'Dodging'
+  Suffix: 'of Dodging'
+  CanDuplicate: true
+  Attributes:
+    DodgeChance: 1.0-2.0
+Dodge3:
+  StartLevel: 20
+  EndLevel: 30
+  Prefix: 'Dodging'
+  Suffix: 'of Dodging'
+  CanDuplicate: true
+  Attributes:
+    DodgeChance: 3.0-5.0
+Dodge4:
+  StartLevel: 30
+  EndLevel: 40
+  Prefix: 'Greater Dodging'
+  Suffix: 'of Greater Dodging'
+  CanDuplicate: true
+  Attributes:
+    DodgeChance: 4.0-5.0
+Dodge5:
+  StartLevel: 40
+  EndLevel: 50
+  Prefix: 'Greater Dodging'
+  Suffix: 'of Greater Dodging'
+  CanDuplicate: true
+  Attributes:
+    DodgeChance: 5.0-6.0
+Critical1:
+  StartLevel: 1
+  EndLevel: 10
+  Prefix: 'Minor Critical'
+  Suffix: 'of Minor Critical'
+  CanDuplicate: true
+  Attributes:
+    CriticalChance: 1.0-2.0
+    CriticalDamage: 5.0-10.0
+Critical2:
+  StartLevel: 10
+  EndLevel: 20
+  Prefix: 'Critical'
+  Suffix: 'of Critical'
+  CanDuplicate: true
+  Attributes:
+    CriticalChance: 1.0-3.0
+    CriticalDamage: 5.0-15.0
+Critical3:
+  StartLevel: 20
+  EndLevel: 30
+  Prefix: 'Critical'
+  Suffix: 'of Critical'
+  CanDuplicate: true
+  Attributes:
+    CriticalChance: 2.0-4.0
+    CriticalDamage: 10.0-20.0
+Critical4:
+  StartLevel: 30
+  EndLevel: 40
+  Prefix: 'Greater Critical'
+  Suffix: 'of Greater Critical'
+  CanDuplicate: true
+  Attributes:
+    CriticalChance: 3.0-5.0
+    CriticalDamage: 12.0-25.0
+Critical5:
+  StartLevel: 40
+  EndLevel: 50
+  Prefix: 'Greater Critical'
+  Suffix: 'of Greater Critical'
+  CanDuplicate: true
+  Attributes:
+    CriticalChance: 4.0-6.0
+    CriticalDamage: 14.0
